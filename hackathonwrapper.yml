@@ -1,6 +1,7 @@
 apps:
   - script : grovepi_iotcs.js
     name   : 'hackathonwrapper'
+    cwd    : '/home/pi/hackathonwrapper'
     watch  : true
     args   : '-d hackathon_accenture-provisioning-file.conf -s https://iotmadrid-usoracletrial03366.iot.us.oraclecloud.com -v'
     env    :
