@@ -7,19 +7,19 @@ Before powering on the Raspberry Pi, it is important to connect each sensor to t
 
 The Light sensor
 
-   ![Light sensor](screenshots/light sensor.jpg)
+   ![Light sensor](screenshots/lightsensor.jpg)
 
 is to be connected to the Analog Port #0.
 
-   ![A0](screenshots/grovepi board_a0.png)
+   ![A0](screenshots/grovepi_board_a0.png)
 
 And the DHT sensor
 
-   ![DHT sensor](screenshots/dht sensor.jpg)
+   ![DHT sensor](screenshots/dhtsensor.jpg)
 
 is to be connected to the Digital Port #3.
 
-   ![D3](screenshots/grovepi board_d3.png)
+   ![D3](screenshots/grovepi_board_d3.png)
 
 You might use other analog and digital ports, but then you'll need to change the `grovepi_iotcs.js` file accordingly.
 
