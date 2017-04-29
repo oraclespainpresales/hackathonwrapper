@@ -1,0 +1,6 @@
+apps:
+  - script   : ./grovepi_iotcs.js
+    name     : 'hackathonwrapper'
+    watch  : true
+    env    :
+      NODE_PATH: /usr/lib/node_modules
