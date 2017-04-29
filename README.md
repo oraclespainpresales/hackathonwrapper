@@ -21,7 +21,7 @@ is to be connected to the Digital Port #3.
 
    ![D3](screenshots/grovepi_board_d3.png)
 
-You might use other analog and digital ports, but then you'll need to change the `grovepi_iotcs.js` file accordingly.
+You might use other analog and digital ports, but then you'll need to change the [grovepi_iotcs.js](grovepi_iotcs.js) file accordingly.
 
 Once done, participants only need to power the given Raspberry Pi and, if everything runs as expected, sensor data will be automatically sent to the Hackathon's IoTCS instance's device(s).
 
@@ -42,3 +42,7 @@ You will need to check in your WIFI router the IP address assigned to the RPi. A
 Finally, the credentials for the RPi are `pi / pi`. From the `pi` user you can sudo any `root` command.
 
 ## Happy Hackathon-ing!!!
+
+### Further reading
+
+[Richer sample of GrovePi and IoTCS](https://github.com/ccasares/grovepi-iotcs)
