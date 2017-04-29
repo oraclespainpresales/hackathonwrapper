@@ -275,7 +275,7 @@ async.series( {
             } else {
               log.warn(GROVEPI, "DHT Digital Sensor: Invalid value read: " + res);
             }
-          })
+          });
           dhtSensor.watch(500) // milliseconds
           timer = setInterval(() => {
             if ( !dhtData) {
@@ -298,7 +298,7 @@ async.series( {
             } else {
               log.warn(GROVEPI, "Light Sensor: Invalid value read: " + res);
             }
-          }
+          });
           lightSensor.watch();
           timer = setInterval(() => {
             if ( !lightData) {
