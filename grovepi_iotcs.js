@@ -107,6 +107,7 @@ var client = restify.createJsonClient({
   connectTimeout: 1000,
   requestTimeout: 1000,
   retry: false,
+  rejectUnauthorized: false,
   headers: {
     "content-type": "application/json",
     "accept": "application/json"
