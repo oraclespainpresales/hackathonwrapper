@@ -292,10 +292,10 @@ async.series( {
           }, 1000);
           // Light Sensor
           log.verbose(GROVEPI, 'Light Analog Sensor (start watch)')
-          var lightData = { resistor: -1 };
+          var lightData = { intensity: -1 };
           lightSensor.on('change', function(res) {
             if (typeof res === 'number') {
-              lightData = { resistor: res };
+              lightData = { intensity: res };
             } else {
               log.warn(GROVEPI, "Light Sensor: Invalid value read: " + res);
             }
