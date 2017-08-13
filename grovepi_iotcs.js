@@ -91,8 +91,8 @@ log.level = (options.verbose) ? 'verbose' : 'info';
 const GROVEPIDEV = "GrovePi+";
 dcl = dcl({debug: false});
 var storePassword = 'Welcome1';
-const DHTSENSOR   = "urn:es:oracle:iot:device:grovepi:dht";
-const LIGHTSENSOR = "urn:es:oracle:iot:device:grovepi:lightsensor";
+const DHTSENSOR   = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:dht";
+const LIGHTSENSOR = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:light";
 var urn = [
      LIGHTSENSOR
    , DHTSENSOR
