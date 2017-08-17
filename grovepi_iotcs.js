@@ -91,7 +91,7 @@ log.level = (options.verbose) ? 'verbose' : 'info';
 const GROVEPIDEV = "GrovePi+";
 dcl = dcl({debug: false});
 var storePassword = 'Welcome1';
-const DHTSENSOR   = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:dht";
+//const DHTSENSOR   = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:dht";
 //const LIGHTSENSOR = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:light";
 const LIGHTSENSOR = "urn:wedo:hospitality:room:sensor:light";
 
@@ -285,12 +285,14 @@ async.series( {
               return;
             }
             log.verbose(GROVEPI, 'DHT onChange value = ' + JSON.stringify(dhtData));
+/**
             var vd = grovepi.getIotVd(DHTSENSOR);
             if (vd) {
               vd.update(dhtData);
             } else {
               log.error(IOTCS, "URN not registered: " + DHTSENSOR);
             }
+**/
           }, 1000);
           // Light Sensor
           log.verbose(GROVEPI, 'Light Analog Sensor (start watch)')
