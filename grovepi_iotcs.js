@@ -154,7 +154,6 @@ process.on('SIGINT', function() {
 
 async.series( {
   internet: function(callbackMainSeries) {
-    callbackMainSeries(null, true);
     log.info(PROCESS, "Checking for Internet & IoTCS server availability...");
     var URI = "/iot/api/v1/private/server";
     var retries = 0;
@@ -165,9 +164,7 @@ async.series( {
       retries++;
       log.verbose(PROCESS, "Trying to reach server %s (attempt %d)", options.iotcs, retries);
       client.get(URI, function(err, req, res, obj) {
-        console.log("Code: " + res.statusCode);
         if (err) {
-          console.log(err.message);
           if (err.statusCode === 401 || err.statusCode === 404) {
             cb(null, "OK");
           } else {
