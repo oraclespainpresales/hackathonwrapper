@@ -92,10 +92,12 @@ const GROVEPIDEV = "GrovePi+";
 dcl = dcl({debug: false});
 var storePassword = 'Welcome1';
 const DHTSENSOR   = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:dht";
-const LIGHTSENSOR = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:light";
+//const LIGHTSENSOR = "urn:com:oracle:ccasares:iot:device:grovepi:sensors:light";
+const LIGHTSENSOR = "urn:wedo:hospitality:room:sensor:light";
+
 var urn = [
      LIGHTSENSOR
-   , DHTSENSOR
+//   , DHTSENSOR
 ];
 var grovepi = new Device(GROVEPIDEV);
 const storeFile = options.device;
