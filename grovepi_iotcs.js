@@ -165,6 +165,7 @@ async.series( {
       log.verbose(PROCESS, "Trying to reach server %s (attempt %d)", options.iotcs, retries);
       client.get(URI, function(err, req, res, obj) {
         if (err) {
+          console.log(err.message);
           if (err.statusCode === 401) {
             cb(null, "OK");
           } else {
