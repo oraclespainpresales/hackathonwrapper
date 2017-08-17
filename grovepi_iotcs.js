@@ -168,7 +168,7 @@ async.series( {
         console.log("Code: " + res.statusCode);
         if (err) {
           console.log(err.message);
-          if (err.statusCode === 401 || err.err.statusCode === 404) {
+          if (err.statusCode === 401 || err.statusCode === 404) {
             cb(null, "OK");
           } else {
             cb(err.message);
