@@ -265,10 +265,13 @@ async.series( {
       onInit: function(res) {
         if (res) {
           log.verbose(GROVEPI, 'GrovePi Version :: ' + board.version());
+          /**
           log.verbose(GROVEPI, "Looking for DHT sensor at digital port #3");
           var dhtSensor = new GrovePi.sensors.DHTDigital(3, GrovePi.sensors.DHTDigital.VERSION.DHT11, GrovePi.sensors.DHTDigital.CELSIUS)
+          **/
           log.verbose(GROVEPI, "Looking for light sensor at analog port #0");
           var lightSensor = new GrovePi.sensors.LightAnalog(0);
+/**
           // DHT Sensor
           log.info(GROVEPI, 'DHT Digital Sensor (start watch)');
           var dhtData = { temperature: -1, humidity: -1 };
@@ -285,15 +288,14 @@ async.series( {
               return;
             }
             log.verbose(GROVEPI, 'DHT onChange value = ' + JSON.stringify(dhtData));
-/**
             var vd = grovepi.getIotVd(DHTSENSOR);
             if (vd) {
               vd.update(dhtData);
             } else {
               log.error(IOTCS, "URN not registered: " + DHTSENSOR);
             }
-**/
           }, 1000);
+**/
           // Light Sensor
           log.verbose(GROVEPI, 'Light Analog Sensor (start watch)')
           var lightData = { intensity: -1 };
